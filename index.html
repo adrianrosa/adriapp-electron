@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AdriApp</title>
+    <link rel="stylesheet" href="./assets/electron-tabs.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="etabs-tabgroup">
+      <div class="etabs-tabs"></div>
+      <div class="etabs-buttons">
+        <button id="refresh" class="fa fa-refresh" title="Refresh this tab"></button>
+        <button id="back" class="fa fa-arrow-left" title="Back"></button>
+        <button id="forward" class="fa fa-arrow-right" title="Forward"></button>
+        <button id="add" class="fa fa-plus" title="Add tab"></button>
+        <label id="add-input-label" class="add-input-label">&nbsp;Enter URL: </label>
+        <input id="add-input" type="text" placeholder="Enter URL" class="add-input" value="http://" />
+        <input id="add-input-name" type="text" placeholder="Enter tab name" class="add-input-name" />
+        <label id="add-status" class="add-status">Invalid URL!</label>
+        <span id="close-add" class="fa fa-close close-add"></span>
+      </div>
+    </div>
+    <div class="etabs-views"></div>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+    require('./tabs.js')
+  </script>
+</html>
